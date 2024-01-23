@@ -47,6 +47,14 @@ class UserbotGetOneResponseStruct extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string extra = 8;</code>
      */
     protected $extra = '';
+    /**
+     * Generated from protobuf field <code>int64 company_id = 9;</code>
+     */
+    protected $company_id = 0;
+    /**
+     * Generated from protobuf field <code>string domino_entrypoint = 10;</code>
+     */
+    protected $domino_entrypoint = '';
 
     /**
      * Constructor.
@@ -62,6 +70,8 @@ class UserbotGetOneResponseStruct extends \Google\Protobuf\Internal\Message
      *     @type int|string $is_react_command
      *     @type int|string $userbot_user_id
      *     @type string $extra
+     *     @type int|string $company_id
+     *     @type string $domino_entrypoint
      * }
      */
     public function __construct($data = NULL) {
@@ -241,6 +251,50 @@ class UserbotGetOneResponseStruct extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->extra = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 company_id = 9;</code>
+     * @return int|string
+     */
+    public function getCompanyId()
+    {
+        return $this->company_id;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 company_id = 9;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setCompanyId($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->company_id = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string domino_entrypoint = 10;</code>
+     * @return string
+     */
+    public function getDominoEntrypoint()
+    {
+        return $this->domino_entrypoint;
+    }
+
+    /**
+     * Generated from protobuf field <code>string domino_entrypoint = 10;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setDominoEntrypoint($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->domino_entrypoint = $var;
 
         return $this;
     }

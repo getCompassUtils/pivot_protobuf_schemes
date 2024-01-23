@@ -9,6 +9,8 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ * данная структура полная копия одноименной структуры из company_protobuf_schemes
+ *
  * Generated from protobuf message <code>senderGrpc.EventUserStruct</code>
  */
 class EventUserStruct extends \Google\Protobuf\Internal\Message
@@ -17,6 +19,10 @@ class EventUserStruct extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int64 user_id = 1;</code>
      */
     protected $user_id = 0;
+    /**
+     * Generated from protobuf field <code>int64 need_force_push = 2;</code>
+     */
+    protected $need_force_push = 0;
     /**
      * Generated from protobuf field <code>int64 need_push = 3;</code>
      */
@@ -29,6 +35,7 @@ class EventUserStruct extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $user_id
+     *     @type int|string $need_force_push
      *     @type int|string $need_push
      * }
      */
@@ -55,6 +62,28 @@ class EventUserStruct extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt64($var);
         $this->user_id = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 need_force_push = 2;</code>
+     * @return int|string
+     */
+    public function getNeedForcePush()
+    {
+        return $this->need_force_push;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 need_force_push = 2;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setNeedForcePush($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->need_force_push = $var;
 
         return $this;
     }

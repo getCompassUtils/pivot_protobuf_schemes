@@ -39,8 +39,10 @@ message SenderSetTokenResponseStruct{
   int64 node = 1;
 }
 
+// данная структура полная копия одноименной структуры из company_protobuf_schemes
 message EventUserStruct {
   int64 user_id = 1;
+  int64 need_force_push = 2;
   int64 need_push = 3;
 }
 

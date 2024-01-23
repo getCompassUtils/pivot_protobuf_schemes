@@ -24,6 +24,8 @@ message UserbotGetOneResponseStruct{
   int64 is_react_command = 6;
   int64 userbot_user_id = 7;
   string extra = 8;
+  int64 company_id = 9;
+  string domino_entrypoint = 10;
 }
 
 // формат запроса для userbot.Clear
