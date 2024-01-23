@@ -32,6 +32,7 @@ message SenderSetTokenRequestStruct{
   string device_id = 3;
   int64 user_id = 4;
   int64 expire = 5;
+  int64 company_id = 6;
 }
 
 // формат ответа для Sender.SetToken
@@ -61,6 +62,7 @@ message SenderSendEventRequestStruct {
   string ws_users = 5;
   string uuid = 6;
   string routine_key = 7;
+  int64 company_id = 8;
 }
 
 // формат ответа для Sender.SendEvent
@@ -75,6 +77,7 @@ message SenderSendEventToAllRequestStruct {
   string uuid = 5;
   string routine_key = 6;
   int64 is_need_push = 7;
+  int64 company_id = 8;
 }
 
 // формат ответа для Sender.SendEventToAll
@@ -83,6 +86,7 @@ message SenderSendEventToAllResponseStruct {}
 // формат запроса для Sender.GetOnlineConnectionsByUserId
 message SenderGetOnlineConnectionsByUserIdRequestStruct {
   int64 user_id = 1;
+  int64 company_id = 2;
 }
 
 message ConnectionInfoStruct{
@@ -104,6 +108,7 @@ message SenderGetOnlineConnectionsByUserIdResponseStruct {
 // формат запроса для Sender.CloseConnectionsByUserId
 message SenderCloseConnectionsByUserIdRequestStruct {
   int64 user_id = 1;
+  int64 company_id = 2;
 }
 
 // формат ответа для Sender.CloseConnectionsByUserId
@@ -114,6 +119,7 @@ message SenderAddTaskPushNotificationRequestStruct {
   repeated int64 user_list = 1;
   string push_data = 2;
   string uuid = 3;
+  int64 company_id = 4;
 }
 
 // формат ответа для Sender.AddTaskPushNotification
@@ -122,6 +128,7 @@ message SenderAddTaskPushNotificationResponseStruct {}
 // формат запроса для Sender.SenderGetOnlineUsersRequestStruct
 message SenderGetOnlineUsersRequestStruct {
   repeated int64 user_list = 1;
+  int64 company_id = 2;
 }
 
 // формат ответа для Sender.GetOnlineUsers
@@ -135,6 +142,7 @@ message SenderAddUsersToThreadRequestStruct {
   string thread_key = 1;
   repeated int64 user_list = 2;
   string routine_key = 3;
+  int64 company_id = 4;
 }
 
 // формат ответа для Sender.AddUsersToThread
@@ -146,6 +154,7 @@ message SenderSendTypingEventRequestStruct {
   string event = 2;
   repeated EventVersionItem event_version_list = 3;
   string routine_key = 4;
+  int64 company_id = 5;
 }
 
 // формат ответа для Sender.SendTypingEvent
@@ -156,6 +165,7 @@ message SenderSendThreadTypingEventRequestStruct {
   repeated int64 user_list = 1;
   string event = 2;
   repeated EventVersionItem event_version_list = 3;
+  int64 company_id = 4;
 }
 
 // формат ответа для Sender.SendThreadTypingEvent
@@ -168,6 +178,7 @@ message SenderSendVoIPRequestStruct {
   string uuid = 3;
   int64 time_to_live = 4;
   string routine_key = 5;
+  int64 company_id = 6;
 }
 
 // формат ответа для Sender.SendVoIP
@@ -182,6 +193,7 @@ message SenderSendIncomingCallRequestStruct {
   string uuid = 5;
   int64 time_to_live = 6;
   string routine_key = 7;
+  int64 company_id = 8;
 }
 
 // формат ответа для Sender.SendIncomingCall

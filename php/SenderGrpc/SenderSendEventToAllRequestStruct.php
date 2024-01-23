@@ -43,6 +43,10 @@ class SenderSendEventToAllRequestStruct extends \Google\Protobuf\Internal\Messag
      * Generated from protobuf field <code>int64 is_need_push = 7;</code>
      */
     protected $is_need_push = 0;
+    /**
+     * Generated from protobuf field <code>int64 company_id = 8;</code>
+     */
+    protected $company_id = 0;
 
     /**
      * Constructor.
@@ -57,6 +61,7 @@ class SenderSendEventToAllRequestStruct extends \Google\Protobuf\Internal\Messag
      *     @type string $uuid
      *     @type string $routine_key
      *     @type int|string $is_need_push
+     *     @type int|string $company_id
      * }
      */
     public function __construct($data = NULL) {
@@ -214,6 +219,28 @@ class SenderSendEventToAllRequestStruct extends \Google\Protobuf\Internal\Messag
     {
         GPBUtil::checkInt64($var);
         $this->is_need_push = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 company_id = 8;</code>
+     * @return int|string
+     */
+    public function getCompanyId()
+    {
+        return $this->company_id;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 company_id = 8;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setCompanyId($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->company_id = $var;
 
         return $this;
     }

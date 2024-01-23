@@ -31,6 +31,10 @@ class SenderSendTypingEventRequestStruct extends \Google\Protobuf\Internal\Messa
      * Generated from protobuf field <code>string routine_key = 4;</code>
      */
     protected $routine_key = '';
+    /**
+     * Generated from protobuf field <code>int64 company_id = 5;</code>
+     */
+    protected $company_id = 0;
 
     /**
      * Constructor.
@@ -42,6 +46,7 @@ class SenderSendTypingEventRequestStruct extends \Google\Protobuf\Internal\Messa
      *     @type string $event
      *     @type \SenderGrpc\EventVersionItem[]|\Google\Protobuf\Internal\RepeatedField $event_version_list
      *     @type string $routine_key
+     *     @type int|string $company_id
      * }
      */
     public function __construct($data = NULL) {
@@ -133,6 +138,28 @@ class SenderSendTypingEventRequestStruct extends \Google\Protobuf\Internal\Messa
     {
         GPBUtil::checkString($var, True);
         $this->routine_key = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 company_id = 5;</code>
+     * @return int|string
+     */
+    public function getCompanyId()
+    {
+        return $this->company_id;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 company_id = 5;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setCompanyId($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->company_id = $var;
 
         return $this;
     }

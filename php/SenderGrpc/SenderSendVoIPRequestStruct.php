@@ -35,6 +35,10 @@ class SenderSendVoIPRequestStruct extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string routine_key = 5;</code>
      */
     protected $routine_key = '';
+    /**
+     * Generated from protobuf field <code>int64 company_id = 6;</code>
+     */
+    protected $company_id = 0;
 
     /**
      * Constructor.
@@ -47,6 +51,7 @@ class SenderSendVoIPRequestStruct extends \Google\Protobuf\Internal\Message
      *     @type string $uuid
      *     @type int|string $time_to_live
      *     @type string $routine_key
+     *     @type int|string $company_id
      * }
      */
     public function __construct($data = NULL) {
@@ -160,6 +165,28 @@ class SenderSendVoIPRequestStruct extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->routine_key = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 company_id = 6;</code>
+     * @return int|string
+     */
+    public function getCompanyId()
+    {
+        return $this->company_id;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 company_id = 6;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setCompanyId($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->company_id = $var;
 
         return $this;
     }

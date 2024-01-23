@@ -27,6 +27,10 @@ class SenderSendThreadTypingEventRequestStruct extends \Google\Protobuf\Internal
      * Generated from protobuf field <code>repeated .senderGrpc.EventVersionItem event_version_list = 3;</code>
      */
     private $event_version_list;
+    /**
+     * Generated from protobuf field <code>int64 company_id = 4;</code>
+     */
+    protected $company_id = 0;
 
     /**
      * Constructor.
@@ -37,6 +41,7 @@ class SenderSendThreadTypingEventRequestStruct extends \Google\Protobuf\Internal
      *     @type int[]|string[]|\Google\Protobuf\Internal\RepeatedField $user_list
      *     @type string $event
      *     @type \SenderGrpc\EventVersionItem[]|\Google\Protobuf\Internal\RepeatedField $event_version_list
+     *     @type int|string $company_id
      * }
      */
     public function __construct($data = NULL) {
@@ -106,6 +111,28 @@ class SenderSendThreadTypingEventRequestStruct extends \Google\Protobuf\Internal
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SenderGrpc\EventVersionItem::class);
         $this->event_version_list = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 company_id = 4;</code>
+     * @return int|string
+     */
+    public function getCompanyId()
+    {
+        return $this->company_id;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 company_id = 4;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setCompanyId($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->company_id = $var;
 
         return $this;
     }

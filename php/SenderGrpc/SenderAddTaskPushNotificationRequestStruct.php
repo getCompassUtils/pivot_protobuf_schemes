@@ -27,6 +27,10 @@ class SenderAddTaskPushNotificationRequestStruct extends \Google\Protobuf\Intern
      * Generated from protobuf field <code>string uuid = 3;</code>
      */
     protected $uuid = '';
+    /**
+     * Generated from protobuf field <code>int64 company_id = 4;</code>
+     */
+    protected $company_id = 0;
 
     /**
      * Constructor.
@@ -37,6 +41,7 @@ class SenderAddTaskPushNotificationRequestStruct extends \Google\Protobuf\Intern
      *     @type int[]|string[]|\Google\Protobuf\Internal\RepeatedField $user_list
      *     @type string $push_data
      *     @type string $uuid
+     *     @type int|string $company_id
      * }
      */
     public function __construct($data = NULL) {
@@ -106,6 +111,28 @@ class SenderAddTaskPushNotificationRequestStruct extends \Google\Protobuf\Intern
     {
         GPBUtil::checkString($var, True);
         $this->uuid = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 company_id = 4;</code>
+     * @return int|string
+     */
+    public function getCompanyId()
+    {
+        return $this->company_id;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 company_id = 4;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setCompanyId($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->company_id = $var;
 
         return $this;
     }

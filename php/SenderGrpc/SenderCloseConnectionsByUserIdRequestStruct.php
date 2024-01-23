@@ -19,6 +19,10 @@ class SenderCloseConnectionsByUserIdRequestStruct extends \Google\Protobuf\Inter
      * Generated from protobuf field <code>int64 user_id = 1;</code>
      */
     protected $user_id = 0;
+    /**
+     * Generated from protobuf field <code>int64 company_id = 2;</code>
+     */
+    protected $company_id = 0;
 
     /**
      * Constructor.
@@ -27,6 +31,7 @@ class SenderCloseConnectionsByUserIdRequestStruct extends \Google\Protobuf\Inter
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $user_id
+     *     @type int|string $company_id
      * }
      */
     public function __construct($data = NULL) {
@@ -52,6 +57,28 @@ class SenderCloseConnectionsByUserIdRequestStruct extends \Google\Protobuf\Inter
     {
         GPBUtil::checkInt64($var);
         $this->user_id = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 company_id = 2;</code>
+     * @return int|string
+     */
+    public function getCompanyId()
+    {
+        return $this->company_id;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 company_id = 2;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setCompanyId($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->company_id = $var;
 
         return $this;
     }

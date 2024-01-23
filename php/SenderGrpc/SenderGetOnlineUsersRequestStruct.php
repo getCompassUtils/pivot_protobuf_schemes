@@ -19,6 +19,10 @@ class SenderGetOnlineUsersRequestStruct extends \Google\Protobuf\Internal\Messag
      * Generated from protobuf field <code>repeated int64 user_list = 1;</code>
      */
     private $user_list;
+    /**
+     * Generated from protobuf field <code>int64 company_id = 2;</code>
+     */
+    protected $company_id = 0;
 
     /**
      * Constructor.
@@ -27,6 +31,7 @@ class SenderGetOnlineUsersRequestStruct extends \Google\Protobuf\Internal\Messag
      *     Optional. Data for populating the Message object.
      *
      *     @type int[]|string[]|\Google\Protobuf\Internal\RepeatedField $user_list
+     *     @type int|string $company_id
      * }
      */
     public function __construct($data = NULL) {
@@ -52,6 +57,28 @@ class SenderGetOnlineUsersRequestStruct extends \Google\Protobuf\Internal\Messag
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::INT64);
         $this->user_list = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 company_id = 2;</code>
+     * @return int|string
+     */
+    public function getCompanyId()
+    {
+        return $this->company_id;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 company_id = 2;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setCompanyId($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->company_id = $var;
 
         return $this;
     }
