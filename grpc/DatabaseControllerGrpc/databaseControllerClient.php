@@ -297,4 +297,18 @@ class databaseControllerClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * @param \DatabaseControllerGrpc\NullRequestStruct $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function UpdateDeployment(\DatabaseControllerGrpc\NullRequestStruct $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/databaseControllerGrpc.databaseController/UpdateDeployment',
+        $argument,
+        ['\DatabaseControllerGrpc\NullResponseStruct', 'decode'],
+        $metadata, $options);
+    }
+
 }

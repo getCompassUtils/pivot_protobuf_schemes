@@ -24,6 +24,10 @@ service databaseController {
   rpc PrepareCompanyDataDir(PrepareCompanyDataDirRequestStruct) returns (NullResponseStruct) {}
   rpc InitSearch(InitSearchRequestStruct) returns (NullResponseStruct) {}
   rpc DropSearchTable(DropSearchTableRequestStruct) returns (NullResponseStruct) {}
+  rpc UpdateDeployment(NullRequestStruct) returns (NullResponseStruct) {}
+}
+
+message NullRequestStruct {
 }
 
 message NullResponseStruct {
