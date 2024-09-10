@@ -1,5 +1,5 @@
 syntax = "proto3";
-package senderGrpc;
+package pivotSenderGrpc;
 option go_package = "/sender";
 
 // сервис, который описывает все метод go_sender

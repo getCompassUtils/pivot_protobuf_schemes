@@ -8,7 +8,7 @@
 			"UserbotCacheGrpc\\": ["grpc/UserbotCacheGrpc", "php/UserbotCacheGrpc"],
 			"KuberGrpc\\": ["grpc/KuberGrpc", "php/KuberGrpc"],
 			"PusherGrpc\\": ["grpc/PusherGrpc", "php/PusherGrpc"],
-			"SenderGrpc\\": ["grpc/SenderGrpc", "php/SenderGrpc"],
+			"PivotSenderGrpc\\": ["grpc/PivotSenderGrpc", "php/PivotSenderGrpc"],
 			"SenderBalancerGrpc\\": ["grpc/SenderBalancerGrpc", "php/SenderBalancerGrpc"],
 			"TestGrpc\\": ["grpc/TestGrpc", "php/TestGrpc"],
 			"DatabaseControllerGrpc\\": ["grpc/DatabaseControllerGrpc", "php/DatabaseControllerGrpc"],
