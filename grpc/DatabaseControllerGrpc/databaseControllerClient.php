@@ -116,20 +116,6 @@ class databaseControllerClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \DatabaseControllerGrpc\CreateVacantCompanyRequestStruct $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function CreateVacantCompany(\DatabaseControllerGrpc\CreateVacantCompanyRequestStruct $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/databaseControllerGrpc.databaseController/CreateVacantCompany',
-        $argument,
-        ['\DatabaseControllerGrpc\NullResponseStruct', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
      * @param \DatabaseControllerGrpc\BindPortRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

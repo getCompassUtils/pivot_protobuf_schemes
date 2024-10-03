@@ -18,15 +18,19 @@ class BindPortRequestStruct extends \Google\Protobuf\Internal\Message
      */
     protected $port = 0;
     /**
-     * Generated from protobuf field <code>int64 company_id = 2;</code>
+     * Generated from protobuf field <code>string host = 3;</code>
+     */
+    protected $host = '';
+    /**
+     * Generated from protobuf field <code>int64 company_id = 4;</code>
      */
     protected $company_id = 0;
     /**
-     * Generated from protobuf field <code>int32 duplicate_data_dir_policy = 3;</code>
+     * Generated from protobuf field <code>int32 duplicate_data_dir_policy = 5;</code>
      */
     protected $duplicate_data_dir_policy = 0;
     /**
-     * Generated from protobuf field <code>int32 non_existing_data_dir_policy = 4;</code>
+     * Generated from protobuf field <code>int32 non_existing_data_dir_policy = 6;</code>
      */
     protected $non_existing_data_dir_policy = 0;
 
@@ -37,6 +41,7 @@ class BindPortRequestStruct extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $port
+     *     @type string $host
      *     @type int|string $company_id
      *     @type int $duplicate_data_dir_policy
      *     @type int $non_existing_data_dir_policy
@@ -70,7 +75,29 @@ class BindPortRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 company_id = 2;</code>
+     * Generated from protobuf field <code>string host = 3;</code>
+     * @return string
+     */
+    public function getHost()
+    {
+        return $this->host;
+    }
+
+    /**
+     * Generated from protobuf field <code>string host = 3;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setHost($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->host = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 company_id = 4;</code>
      * @return int|string
      */
     public function getCompanyId()
@@ -79,7 +106,7 @@ class BindPortRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 company_id = 2;</code>
+     * Generated from protobuf field <code>int64 company_id = 4;</code>
      * @param int|string $var
      * @return $this
      */
@@ -92,7 +119,7 @@ class BindPortRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 duplicate_data_dir_policy = 3;</code>
+     * Generated from protobuf field <code>int32 duplicate_data_dir_policy = 5;</code>
      * @return int
      */
     public function getDuplicateDataDirPolicy()
@@ -101,7 +128,7 @@ class BindPortRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 duplicate_data_dir_policy = 3;</code>
+     * Generated from protobuf field <code>int32 duplicate_data_dir_policy = 5;</code>
      * @param int $var
      * @return $this
      */
@@ -114,7 +141,7 @@ class BindPortRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 non_existing_data_dir_policy = 4;</code>
+     * Generated from protobuf field <code>int32 non_existing_data_dir_policy = 6;</code>
      * @return int
      */
     public function getNonExistingDataDirPolicy()
@@ -123,7 +150,7 @@ class BindPortRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 non_existing_data_dir_policy = 4;</code>
+     * Generated from protobuf field <code>int32 non_existing_data_dir_policy = 6;</code>
      * @param int $var
      * @return $this
      */

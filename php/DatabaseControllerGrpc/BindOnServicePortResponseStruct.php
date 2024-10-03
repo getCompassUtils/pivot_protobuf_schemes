@@ -18,11 +18,15 @@ class BindOnServicePortResponseStruct extends \Google\Protobuf\Internal\Message
      */
     protected $port = 0;
     /**
-     * Generated from protobuf field <code>string mysql_user = 2;</code>
+     * Generated from protobuf field <code>string host = 2;</code>
+     */
+    protected $host = '';
+    /**
+     * Generated from protobuf field <code>string mysql_user = 3;</code>
      */
     protected $mysql_user = '';
     /**
-     * Generated from protobuf field <code>string mysql_pass = 3;</code>
+     * Generated from protobuf field <code>string mysql_pass = 4;</code>
      */
     protected $mysql_pass = '';
 
@@ -33,6 +37,7 @@ class BindOnServicePortResponseStruct extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $port
+     *     @type string $host
      *     @type string $mysql_user
      *     @type string $mysql_pass
      * }
@@ -65,7 +70,29 @@ class BindOnServicePortResponseStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string mysql_user = 2;</code>
+     * Generated from protobuf field <code>string host = 2;</code>
+     * @return string
+     */
+    public function getHost()
+    {
+        return $this->host;
+    }
+
+    /**
+     * Generated from protobuf field <code>string host = 2;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setHost($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->host = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string mysql_user = 3;</code>
      * @return string
      */
     public function getMysqlUser()
@@ -74,7 +101,7 @@ class BindOnServicePortResponseStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string mysql_user = 2;</code>
+     * Generated from protobuf field <code>string mysql_user = 3;</code>
      * @param string $var
      * @return $this
      */
@@ -87,7 +114,7 @@ class BindOnServicePortResponseStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string mysql_pass = 3;</code>
+     * Generated from protobuf field <code>string mysql_pass = 4;</code>
      * @return string
      */
     public function getMysqlPass()
@@ -96,7 +123,7 @@ class BindOnServicePortResponseStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string mysql_pass = 3;</code>
+     * Generated from protobuf field <code>string mysql_pass = 4;</code>
      * @param string $var
      * @return $this
      */

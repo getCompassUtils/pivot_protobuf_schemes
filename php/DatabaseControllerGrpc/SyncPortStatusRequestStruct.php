@@ -18,19 +18,23 @@ class SyncPortStatusRequestStruct extends \Google\Protobuf\Internal\Message
      */
     protected $port = 0;
     /**
-     * Generated from protobuf field <code>int32 status = 2;</code>
+     * Generated from protobuf field <code>string host = 2;</code>
+     */
+    protected $host = '';
+    /**
+     * Generated from protobuf field <code>int32 status = 3;</code>
      */
     protected $status = 0;
     /**
-     * Generated from protobuf field <code>int32 locked_till = 3;</code>
+     * Generated from protobuf field <code>int32 locked_till = 4;</code>
      */
     protected $locked_till = 0;
     /**
-     * Generated from protobuf field <code>int64 company_id = 4;</code>
+     * Generated from protobuf field <code>int64 company_id = 5;</code>
      */
     protected $company_id = 0;
     /**
-     * Generated from protobuf field <code>int64 locked_by_company_id = 5;</code>
+     * Generated from protobuf field <code>int64 locked_by_company_id = 6;</code>
      */
     protected $locked_by_company_id = 0;
 
@@ -41,6 +45,7 @@ class SyncPortStatusRequestStruct extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $port
+     *     @type string $host
      *     @type int $status
      *     @type int $locked_till
      *     @type int|string $company_id
@@ -75,7 +80,29 @@ class SyncPortStatusRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 status = 2;</code>
+     * Generated from protobuf field <code>string host = 2;</code>
+     * @return string
+     */
+    public function getHost()
+    {
+        return $this->host;
+    }
+
+    /**
+     * Generated from protobuf field <code>string host = 2;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setHost($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->host = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int32 status = 3;</code>
      * @return int
      */
     public function getStatus()
@@ -84,7 +111,7 @@ class SyncPortStatusRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 status = 2;</code>
+     * Generated from protobuf field <code>int32 status = 3;</code>
      * @param int $var
      * @return $this
      */
@@ -97,7 +124,7 @@ class SyncPortStatusRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 locked_till = 3;</code>
+     * Generated from protobuf field <code>int32 locked_till = 4;</code>
      * @return int
      */
     public function getLockedTill()
@@ -106,7 +133,7 @@ class SyncPortStatusRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 locked_till = 3;</code>
+     * Generated from protobuf field <code>int32 locked_till = 4;</code>
      * @param int $var
      * @return $this
      */
@@ -119,7 +146,7 @@ class SyncPortStatusRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 company_id = 4;</code>
+     * Generated from protobuf field <code>int64 company_id = 5;</code>
      * @return int|string
      */
     public function getCompanyId()
@@ -128,7 +155,7 @@ class SyncPortStatusRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 company_id = 4;</code>
+     * Generated from protobuf field <code>int64 company_id = 5;</code>
      * @param int|string $var
      * @return $this
      */
@@ -141,7 +168,7 @@ class SyncPortStatusRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 locked_by_company_id = 5;</code>
+     * Generated from protobuf field <code>int64 locked_by_company_id = 6;</code>
      * @return int|string
      */
     public function getLockedByCompanyId()
@@ -150,7 +177,7 @@ class SyncPortStatusRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 locked_by_company_id = 5;</code>
+     * Generated from protobuf field <code>int64 locked_by_company_id = 6;</code>
      * @param int|string $var
      * @return $this
      */
