@@ -11,7 +11,6 @@ service databaseController {
   rpc BeginDataApplying(BeginDataApplyingRequestStruct) returns (BeginDataApplyingResponseStruct) {}
   rpc GetRoutineStatus(GetRoutineStatusRequest) returns (GetRoutineStatusResponse) {}
   rpc GenerateMysqlConfig(GenerateMysqlConfigRequest) returns (GenerateMysqlConfigResponse) {}
-  rpc CreateVacantCompany(CreateVacantCompanyRequestStruct) returns (NullResponseStruct) {}
   rpc BindPort(BindPortRequestStruct) returns (BindPortResponseStruct) {}
   rpc UnbindPort(UnbindPortRequestStruct) returns (NullResponseStruct) {}
   rpc AddPort(AddPortRequestStruct) returns (NullResponseStruct) {}
@@ -35,6 +34,7 @@ message NullResponseStruct {
 
 message GetStatusRequestStruct {
   int32 port = 1;
+  string host = 2;
 }
 
 message GetStatusResponseStruct {
@@ -48,8 +48,9 @@ message GetCompanyPortRequestStruct {
 
 message GetCompanyPortResponseStruct {
   int32 port = 1;
-  string mysql_user = 2;
-  string mysql_pass = 3;
+  string host = 2;
+  string mysql_user = 3;
+  string mysql_pass = 4;
 }
 
 message BindOnServicePortRequestStruct {
@@ -58,8 +59,9 @@ message BindOnServicePortRequestStruct {
 
 message BindOnServicePortResponseStruct {
   int32 port = 1;
-  string mysql_user = 2;
-  string mysql_pass = 3;
+  string host = 2;
+  string mysql_user = 3;
+  string mysql_pass = 4;
 }
 
 message BeginDataCopyingRequestStruct {
@@ -94,16 +96,12 @@ message GetRoutineStatusResponse {
 message GenerateMysqlConfigRequest {}
 message GenerateMysqlConfigResponse {}
 
-message CreateVacantCompanyRequestStruct {
-  int32 port = 1;
-  int64 company_id = 2;
-}
-
 message BindPortRequestStruct {
   int32 port = 1;
-  int64 company_id = 2;
-  int32 duplicate_data_dir_policy = 3;
-  int32 non_existing_data_dir_policy = 4;
+  string host = 3;
+  int64 company_id = 4;
+  int32 duplicate_data_dir_policy = 5;
+  int32 non_existing_data_dir_policy = 6;
 }
 
 message BindPortResponseStruct {
@@ -113,18 +111,20 @@ message BindPortResponseStruct {
 
 message UnbindPortRequestStruct {
   int32 port = 1;
+  string host = 2;
 }
 
 message AddPortRequestStruct {
   int32 port = 1;
-  int32 status = 2;
-  int32 type = 3;
-  int32 locked_till = 4;
-  int32 created_at = 5;
-  int32 updated_at = 6;
-  int64 company_id = 7;
-  string extra = 8;
-  int64 locked_by_company_id = 9;
+  string host = 2;
+  int32 status = 3;
+  int32 type = 4;
+  int32 locked_till = 5;
+  int32 created_at = 6;
+  int32 updated_at = 7;
+  int64 company_id = 8;
+  string extra = 9;
+  int64 locked_by_company_id = 10;
 }
 
 message CreateMysqlBackupRequestStruct {
@@ -148,14 +148,16 @@ message MigrateResponseStruct {
 
 message SetPortInvalidRequestStruct {
   int32 port = 1;
+  string host = 2;
 }
 
 message SyncPortStatusRequestStruct {
   int32 port = 1;
-  int32 status = 2;
-  int32 locked_till = 3;
-  int64 company_id = 4;
-  int64 locked_by_company_id = 5;
+  string host = 2;
+  int32 status = 3;
+  int32 locked_till = 4;
+  int64 company_id = 5;
+  int64 locked_by_company_id = 6;
 }
 
 message SyncPortStatusResponseStruct {
@@ -165,6 +167,7 @@ message SyncPortStatusResponseStruct {
 
 message ResetPortRequestStruct {
   int32 port = 1;
+  string host = 2;
 }
 
 message PrepareCompanyDataDirRequestStruct {

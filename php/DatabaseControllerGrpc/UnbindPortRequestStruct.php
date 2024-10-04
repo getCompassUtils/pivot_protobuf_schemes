@@ -17,6 +17,10 @@ class UnbindPortRequestStruct extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int32 port = 1;</code>
      */
     protected $port = 0;
+    /**
+     * Generated from protobuf field <code>string host = 2;</code>
+     */
+    protected $host = '';
 
     /**
      * Constructor.
@@ -25,6 +29,7 @@ class UnbindPortRequestStruct extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $port
+     *     @type string $host
      * }
      */
     public function __construct($data = NULL) {
@@ -50,6 +55,28 @@ class UnbindPortRequestStruct extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt32($var);
         $this->port = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string host = 2;</code>
+     * @return string
+     */
+    public function getHost()
+    {
+        return $this->host;
+    }
+
+    /**
+     * Generated from protobuf field <code>string host = 2;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setHost($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->host = $var;
 
         return $this;
     }

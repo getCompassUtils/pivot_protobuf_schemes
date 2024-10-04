@@ -18,35 +18,39 @@ class AddPortRequestStruct extends \Google\Protobuf\Internal\Message
      */
     protected $port = 0;
     /**
-     * Generated from protobuf field <code>int32 status = 2;</code>
+     * Generated from protobuf field <code>string host = 2;</code>
+     */
+    protected $host = '';
+    /**
+     * Generated from protobuf field <code>int32 status = 3;</code>
      */
     protected $status = 0;
     /**
-     * Generated from protobuf field <code>int32 type = 3;</code>
+     * Generated from protobuf field <code>int32 type = 4;</code>
      */
     protected $type = 0;
     /**
-     * Generated from protobuf field <code>int32 locked_till = 4;</code>
+     * Generated from protobuf field <code>int32 locked_till = 5;</code>
      */
     protected $locked_till = 0;
     /**
-     * Generated from protobuf field <code>int32 created_at = 5;</code>
+     * Generated from protobuf field <code>int32 created_at = 6;</code>
      */
     protected $created_at = 0;
     /**
-     * Generated from protobuf field <code>int32 updated_at = 6;</code>
+     * Generated from protobuf field <code>int32 updated_at = 7;</code>
      */
     protected $updated_at = 0;
     /**
-     * Generated from protobuf field <code>int64 company_id = 7;</code>
+     * Generated from protobuf field <code>int64 company_id = 8;</code>
      */
     protected $company_id = 0;
     /**
-     * Generated from protobuf field <code>string extra = 8;</code>
+     * Generated from protobuf field <code>string extra = 9;</code>
      */
     protected $extra = '';
     /**
-     * Generated from protobuf field <code>int64 locked_by_company_id = 9;</code>
+     * Generated from protobuf field <code>int64 locked_by_company_id = 10;</code>
      */
     protected $locked_by_company_id = 0;
 
@@ -57,6 +61,7 @@ class AddPortRequestStruct extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $port
+     *     @type string $host
      *     @type int $status
      *     @type int $type
      *     @type int $locked_till
@@ -95,7 +100,29 @@ class AddPortRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 status = 2;</code>
+     * Generated from protobuf field <code>string host = 2;</code>
+     * @return string
+     */
+    public function getHost()
+    {
+        return $this->host;
+    }
+
+    /**
+     * Generated from protobuf field <code>string host = 2;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setHost($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->host = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int32 status = 3;</code>
      * @return int
      */
     public function getStatus()
@@ -104,7 +131,7 @@ class AddPortRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 status = 2;</code>
+     * Generated from protobuf field <code>int32 status = 3;</code>
      * @param int $var
      * @return $this
      */
@@ -117,7 +144,7 @@ class AddPortRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 type = 3;</code>
+     * Generated from protobuf field <code>int32 type = 4;</code>
      * @return int
      */
     public function getType()
@@ -126,7 +153,7 @@ class AddPortRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 type = 3;</code>
+     * Generated from protobuf field <code>int32 type = 4;</code>
      * @param int $var
      * @return $this
      */
@@ -139,7 +166,7 @@ class AddPortRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 locked_till = 4;</code>
+     * Generated from protobuf field <code>int32 locked_till = 5;</code>
      * @return int
      */
     public function getLockedTill()
@@ -148,7 +175,7 @@ class AddPortRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 locked_till = 4;</code>
+     * Generated from protobuf field <code>int32 locked_till = 5;</code>
      * @param int $var
      * @return $this
      */
@@ -161,7 +188,7 @@ class AddPortRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 created_at = 5;</code>
+     * Generated from protobuf field <code>int32 created_at = 6;</code>
      * @return int
      */
     public function getCreatedAt()
@@ -170,7 +197,7 @@ class AddPortRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 created_at = 5;</code>
+     * Generated from protobuf field <code>int32 created_at = 6;</code>
      * @param int $var
      * @return $this
      */
@@ -183,7 +210,7 @@ class AddPortRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 updated_at = 6;</code>
+     * Generated from protobuf field <code>int32 updated_at = 7;</code>
      * @return int
      */
     public function getUpdatedAt()
@@ -192,7 +219,7 @@ class AddPortRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 updated_at = 6;</code>
+     * Generated from protobuf field <code>int32 updated_at = 7;</code>
      * @param int $var
      * @return $this
      */
@@ -205,7 +232,7 @@ class AddPortRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 company_id = 7;</code>
+     * Generated from protobuf field <code>int64 company_id = 8;</code>
      * @return int|string
      */
     public function getCompanyId()
@@ -214,7 +241,7 @@ class AddPortRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 company_id = 7;</code>
+     * Generated from protobuf field <code>int64 company_id = 8;</code>
      * @param int|string $var
      * @return $this
      */
@@ -227,7 +254,7 @@ class AddPortRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string extra = 8;</code>
+     * Generated from protobuf field <code>string extra = 9;</code>
      * @return string
      */
     public function getExtra()
@@ -236,7 +263,7 @@ class AddPortRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string extra = 8;</code>
+     * Generated from protobuf field <code>string extra = 9;</code>
      * @param string $var
      * @return $this
      */
@@ -249,7 +276,7 @@ class AddPortRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 locked_by_company_id = 9;</code>
+     * Generated from protobuf field <code>int64 locked_by_company_id = 10;</code>
      * @return int|string
      */
     public function getLockedByCompanyId()
@@ -258,7 +285,7 @@ class AddPortRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 locked_by_company_id = 9;</code>
+     * Generated from protobuf field <code>int64 locked_by_company_id = 10;</code>
      * @param int|string $var
      * @return $this
      */
