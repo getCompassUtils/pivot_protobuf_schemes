@@ -5,6 +5,7 @@
 	"autoload": {
 		"psr-4": {
 			"PivotCacheGrpc\\": ["grpc/PivotCacheGrpc", "php/PivotCacheGrpc"],
+			"ActivityGrpc\\": ["grpc/ActivityGrpc", "php/ActivityGrpc"],
 			"UserbotCacheGrpc\\": ["grpc/UserbotCacheGrpc", "php/UserbotCacheGrpc"],
 			"KuberGrpc\\": ["grpc/KuberGrpc", "php/KuberGrpc"],
 			"PusherGrpc\\": ["grpc/PusherGrpc", "php/PusherGrpc"],
