@@ -5,7 +5,6 @@
 // source: proto/go_activity.proto
 
 package activity
-
 import (
 	context "context"
 	grpc "google.golang.org/grpc"

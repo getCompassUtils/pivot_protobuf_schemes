@@ -6,6 +6,7 @@
 		"psr-4": {
 			"PivotCacheGrpc\\": ["grpc/PivotCacheGrpc", "php/PivotCacheGrpc"],
 			"ActivityGrpc\\": ["grpc/ActivityGrpc", "php/ActivityGrpc"],
+			"AuthGrpc\\": ["grpc/AuthGrpc", "php/AuthGrpc"],
 			"UserbotCacheGrpc\\": ["grpc/UserbotCacheGrpc", "php/UserbotCacheGrpc"],
 			"KuberGrpc\\": ["grpc/KuberGrpc", "php/KuberGrpc"],
 			"PusherGrpc\\": ["grpc/PusherGrpc", "php/PusherGrpc"],
