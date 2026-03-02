@@ -1,0 +1,115 @@
+syntax = "proto3";
+package authGrpc;
+option go_package = "auth/";
+
+// сервис, который описывает все grpc методы go_auth
+service auth{
+
+  rpc ApikeyAuthenticate(ApiTokenAuthenticateRequestStruct) returns (ApiTokenAuthenticateResponseStruct) {}
+  rpc ApikeyCreate(ApikeyCreateRequestStruct) returns (ApiKeyStruct) {}
+  rpc ApikeyGet(ApikeyGetRequestStruct) returns (ApiKeyStruct) {}
+  rpc ApikeyRefresh(ApikeyRefreshRequestStruct) returns (ApiKeyStruct) {}
+  rpc ApikeyEdit(ApikeyEditRequestStruct) returns (ApiKeyStruct) {}
+  rpc ApikeyRemove(ApikeyRemoveRequestStruct) returns (ApikeyRemoveResponseStruct) {}
+  rpc ApikeyRemoveAll(ApikeyRemoveAllRequestStruct) returns (ApikeyRemoveAllResponseStruct) {}
+  rpc ApikeyGetList(ApikeyGetListRequestStruct) returns (ApiKeyListStruct) {}
+  rpc ApikeyGetTemplateList(ApikeyGetTemplateListRequestStruct) returns (ApiKeyTemplateListStruct) {}
+}
+
+
+// структура запроса метода авторизации апи ключа
+message ApiTokenAuthenticateRequestStruct {
+  int64 user_id = 1;
+  string api_token = 2;
+}
+
+// структура ответа метода авторизации апи ключа
+message ApiTokenAuthenticateResponseStruct {
+  int64 user_id = 1;
+  map<int64, int64> scope_list_int = 2;
+}
+
+// структура ключа
+message ApiKeyStruct {
+  int64 user_id = 1;
+  string api_key = 2;
+  int64 expires_at = 3;
+  string name = 4;
+  map<string, string> scope_list = 5;
+  int64 template_id = 6;
+}
+
+// структура списка ключей
+message ApiKeyListStruct {
+  repeated ApiKeyStruct api_key_list = 1;
+}
+
+// структура запроса метода создания апи ключа
+message ApikeyCreateRequestStruct {
+  int64 user_id = 1;
+  int64 expires_at = 2;
+  string name = 3;
+  map<string, string> scope_list = 4;
+  int64 template_id = 5;
+}
+
+// структура запроса метода пересоздания апи ключа
+message ApikeyRefreshRequestStruct {
+  int64 user_id = 1;
+  string api_key = 2;
+}
+
+// структура запроса метода получения апи ключа
+message ApikeyGetRequestStruct {
+  string api_key = 1;
+}
+
+// структура запроса метода редактирования апи ключа
+message ApikeyEditRequestStruct {
+  int64 user_id = 1;
+  string api_key = 2;
+  int64 expires_at = 3;
+  string name = 4;
+  map<string, string> scope_list = 5;
+  string extra = 6;
+}
+
+// структура запроса метода удаления апи ключа
+message ApikeyRemoveRequestStruct {
+  int64 user_id = 1;
+  string api_key = 2;
+}
+
+// структура ответа метода удаления апи ключа
+message ApikeyRemoveResponseStruct {}
+
+// структура запроса метода удаления списока апи ключей для пользователя
+message ApikeyRemoveAllRequestStruct {
+  int64 user_id = 1;
+}
+
+// структура ответа метода удаления списка апи ключей
+message ApikeyRemoveAllResponseStruct {}
+
+// структура запроса метода получения массива апи ключей
+message ApikeyGetListRequestStruct {
+  int64 user_id = 1;
+}
+
+// структура запроса метода получения массива шаблонов апи ключей
+message ApikeyGetTemplateListRequestStruct {}
+
+// структура темплейта
+message ApiKeyTemplateStruct {
+  int64 template_id = 1;
+  int64 order = 2;
+  string title = 3;
+  string uniq_name = 4;
+  string description = 5;
+  map<string, string> scope_list = 6;
+}
+
+// структура списка темплейтов
+message ApiKeyTemplateListStruct {
+  repeated ApiKeyTemplateStruct apikey_template_list = 1;
+}

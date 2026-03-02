@@ -8,6 +8,9 @@ service databaseController {
   rpc GetCompanyPort(GetCompanyPortRequestStruct) returns (GetCompanyPortResponseStruct) {}
   rpc BindOnServicePort(BindOnServicePortRequestStruct) returns (BindOnServicePortResponseStruct) {}
   rpc BeginDataCopying(BeginDataCopyingRequestStruct) returns (BeginDataCopyingResponseStruct) {}
+  rpc BackupActiveCompany(BackupActiveCompanyRequestStruct) returns (BackupActiveCompanyResponseStruct) {}
+  rpc BackupInactiveCompany(BackupInactiveCompanyRequestStruct) returns (BackupInactiveCompanyResponseStruct) {}
+  rpc UploadBackupToStorage(UploadBackupToStorageRequestStruct) returns (UploadBackupToStorageResponseStruct) {}
   rpc BeginDataApplying(BeginDataApplyingRequestStruct) returns (BeginDataApplyingResponseStruct) {}
   rpc GetRoutineStatus(GetRoutineStatusRequest) returns (GetRoutineStatusResponse) {}
   rpc GenerateMysqlConfig(GenerateMysqlConfigRequest) returns (GenerateMysqlConfigResponse) {}
@@ -181,4 +184,35 @@ message InitSearchRequestStruct {
 
 message DropSearchTableRequestStruct {
   int64 space_id = 1;
+}
+
+message BackupActiveCompanyRequestStruct {
+  int64 company_id = 1;
+  string backup_dir = 2;
+}
+
+message BackupActiveCompanyResponseStruct {
+  string routine_key = 1;
+  GetRoutineStatusResponse routine = 2;
+}
+
+message BackupInactiveCompanyRequestStruct {
+  int64 company_id = 1;
+  string backup_dir = 2;
+}
+
+message BackupInactiveCompanyResponseStruct {
+  string routine_key = 1;
+  GetRoutineStatusResponse routine = 2;
+}
+
+message UploadBackupToStorageRequestStruct {
+  string domino_id = 1;
+  int64 company_id = 2;
+  string backup_name = 3;
+}
+
+message UploadBackupToStorageResponseStruct {
+  string routine_key = 1;
+  GetRoutineStatusResponse routine = 2;
 }
