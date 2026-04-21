@@ -15,6 +15,7 @@ ENV GO111MODULE on
 ENV GOPATH ${HOME}/go
 ENV GOROOT /usr/local/go
 ENV PATH $PATH:$GOROOT/bin:$GOPATH/bin
+ENV MAKEFLAGS="-j4"
 
 RUN apt-get update && apt-get install -y php-pear php${PHP_VERSION} php${PHP_VERSION}-dev phpunit autoconf automake libtool make gcc curl unzip zip libtool zlib1g-dev cmake
 RUN mkdir /tmp/protoc && curl -OL "${PB_REL}/download/v${PROTOBUF_VERSION}/${PROTONAME}.zip" && unzip ${PROTONAME} -d /tmp/protoc && mv /tmp/protoc/bin/* /usr/local/bin/ && mv /tmp/protoc/include/* /usr/local/include/

@@ -143,4 +143,18 @@ class authClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * @param \AuthGrpc\GetAvailableScopeNamesRequestStruct $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \AuthGrpc\GetAvailableScopeNamesResponseStruct
+     */
+    public function GetAvailableScopeNames(\AuthGrpc\GetAvailableScopeNamesRequestStruct $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/authGrpc.auth/GetAvailableScopeNames',
+        $argument,
+        ['\AuthGrpc\GetAvailableScopeNamesResponseStruct', 'decode'],
+        $metadata, $options);
+    }
+
 }
