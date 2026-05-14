@@ -14,6 +14,7 @@ service auth{
   rpc ApikeyRemoveAll(ApikeyRemoveAllRequestStruct) returns (ApikeyRemoveAllResponseStruct) {}
   rpc ApikeyGetList(ApikeyGetListRequestStruct) returns (ApiKeyListStruct) {}
   rpc ApikeyGetTemplateList(ApikeyGetTemplateListRequestStruct) returns (ApiKeyTemplateListStruct) {}
+  rpc GetAvailableScopeNames(GetAvailableScopeNamesRequestStruct) returns (GetAvailableScopeNamesResponseStruct) {}
 }
 
 
@@ -94,6 +95,12 @@ message ApikeyRemoveAllResponseStruct {}
 // структура запроса метода получения массива апи ключей
 message ApikeyGetListRequestStruct {
   int64 user_id = 1;
+}
+
+message GetAvailableScopeNamesRequestStruct {}
+
+message GetAvailableScopeNamesResponseStruct {
+  map<int64, string> scope_names = 5;
 }
 
 // структура запроса метода получения массива шаблонов апи ключей

@@ -774,6 +774,91 @@ func (x *ApikeyGetListRequestStruct) GetUserId() int64 {
 	return 0
 }
 
+type GetAvailableScopeNamesRequestStruct struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+}
+
+func (x *GetAvailableScopeNamesRequestStruct) Reset() {
+	*x = GetAvailableScopeNamesRequestStruct{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_proto_go_auth_proto_msgTypes[13]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetAvailableScopeNamesRequestStruct) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetAvailableScopeNamesRequestStruct) ProtoMessage() {}
+
+func (x *GetAvailableScopeNamesRequestStruct) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_go_auth_proto_msgTypes[13]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetAvailableScopeNamesRequestStruct.ProtoReflect.Descriptor instead.
+func (*GetAvailableScopeNamesRequestStruct) Descriptor() ([]byte, []int) {
+	return file_proto_go_auth_proto_rawDescGZIP(), []int{13}
+}
+
+type GetAvailableScopeNamesResponseStruct struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	ScopeNames map[int64]string `protobuf:"bytes,5,rep,name=scope_names,json=scopeNames,proto3" json:"scope_names,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+}
+
+func (x *GetAvailableScopeNamesResponseStruct) Reset() {
+	*x = GetAvailableScopeNamesResponseStruct{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_proto_go_auth_proto_msgTypes[14]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetAvailableScopeNamesResponseStruct) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetAvailableScopeNamesResponseStruct) ProtoMessage() {}
+
+func (x *GetAvailableScopeNamesResponseStruct) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_go_auth_proto_msgTypes[14]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetAvailableScopeNamesResponseStruct.ProtoReflect.Descriptor instead.
+func (*GetAvailableScopeNamesResponseStruct) Descriptor() ([]byte, []int) {
+	return file_proto_go_auth_proto_rawDescGZIP(), []int{14}
+}
+
+func (x *GetAvailableScopeNamesResponseStruct) GetScopeNames() map[int64]string {
+	if x != nil {
+		return x.ScopeNames
+	}
+	return nil
+}
+
 // структура запроса метода получения массива шаблонов апи ключей
 type ApikeyGetTemplateListRequestStruct struct {
 	state         protoimpl.MessageState
@@ -784,7 +869,7 @@ type ApikeyGetTemplateListRequestStruct struct {
 func (x *ApikeyGetTemplateListRequestStruct) Reset() {
 	*x = ApikeyGetTemplateListRequestStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_auth_proto_msgTypes[13]
+		mi := &file_proto_go_auth_proto_msgTypes[15]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -797,7 +882,7 @@ func (x *ApikeyGetTemplateListRequestStruct) String() string {
 func (*ApikeyGetTemplateListRequestStruct) ProtoMessage() {}
 
 func (x *ApikeyGetTemplateListRequestStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_auth_proto_msgTypes[13]
+	mi := &file_proto_go_auth_proto_msgTypes[15]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -810,7 +895,7 @@ func (x *ApikeyGetTemplateListRequestStruct) ProtoReflect() protoreflect.Message
 
 // Deprecated: Use ApikeyGetTemplateListRequestStruct.ProtoReflect.Descriptor instead.
 func (*ApikeyGetTemplateListRequestStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_auth_proto_rawDescGZIP(), []int{13}
+	return file_proto_go_auth_proto_rawDescGZIP(), []int{15}
 }
 
 // структура темплейта
@@ -830,7 +915,7 @@ type ApiKeyTemplateStruct struct {
 func (x *ApiKeyTemplateStruct) Reset() {
 	*x = ApiKeyTemplateStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_auth_proto_msgTypes[14]
+		mi := &file_proto_go_auth_proto_msgTypes[16]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -843,7 +928,7 @@ func (x *ApiKeyTemplateStruct) String() string {
 func (*ApiKeyTemplateStruct) ProtoMessage() {}
 
 func (x *ApiKeyTemplateStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_auth_proto_msgTypes[14]
+	mi := &file_proto_go_auth_proto_msgTypes[16]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -856,7 +941,7 @@ func (x *ApiKeyTemplateStruct) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ApiKeyTemplateStruct.ProtoReflect.Descriptor instead.
 func (*ApiKeyTemplateStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_auth_proto_rawDescGZIP(), []int{14}
+	return file_proto_go_auth_proto_rawDescGZIP(), []int{16}
 }
 
 func (x *ApiKeyTemplateStruct) GetTemplateId() int64 {
@@ -913,7 +998,7 @@ type ApiKeyTemplateListStruct struct {
 func (x *ApiKeyTemplateListStruct) Reset() {
 	*x = ApiKeyTemplateListStruct{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_go_auth_proto_msgTypes[15]
+		mi := &file_proto_go_auth_proto_msgTypes[17]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -926,7 +1011,7 @@ func (x *ApiKeyTemplateListStruct) String() string {
 func (*ApiKeyTemplateListStruct) ProtoMessage() {}
 
 func (x *ApiKeyTemplateListStruct) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_go_auth_proto_msgTypes[15]
+	mi := &file_proto_go_auth_proto_msgTypes[17]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -939,7 +1024,7 @@ func (x *ApiKeyTemplateListStruct) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ApiKeyTemplateListStruct.ProtoReflect.Descriptor instead.
 func (*ApiKeyTemplateListStruct) Descriptor() ([]byte, []int) {
-	return file_proto_go_auth_proto_rawDescGZIP(), []int{15}
+	return file_proto_go_auth_proto_rawDescGZIP(), []int{17}
 }
 
 func (x *ApiKeyTemplateListStruct) GetApikeyTemplateList() []*ApiKeyTemplateStruct {
@@ -1056,7 +1141,22 @@ var file_proto_go_auth_proto_rawDesc = []byte{
 	0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x35, 0x0a, 0x1a, 0x41, 0x70, 0x69, 0x6b, 0x65, 0x79,
 	0x47, 0x65, 0x74, 0x4c, 0x69, 0x73, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74,
 	0x72, 0x75, 0x63, 0x74, 0x12, 0x17, 0x0a, 0x07, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18,
-	0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x22, 0x24, 0x0a,
+	0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x22, 0x25, 0x0a,
+	0x23, 0x47, 0x65, 0x74, 0x41, 0x76, 0x61, 0x69, 0x6c, 0x61, 0x62, 0x6c, 0x65, 0x53, 0x63, 0x6f,
+	0x70, 0x65, 0x4e, 0x61, 0x6d, 0x65, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74,
+	0x72, 0x75, 0x63, 0x74, 0x22, 0xc6, 0x01, 0x0a, 0x24, 0x47, 0x65, 0x74, 0x41, 0x76, 0x61, 0x69,
+	0x6c, 0x61, 0x62, 0x6c, 0x65, 0x53, 0x63, 0x6f, 0x70, 0x65, 0x4e, 0x61, 0x6d, 0x65, 0x73, 0x52,
+	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x12, 0x5f, 0x0a,
+	0x0b, 0x73, 0x63, 0x6f, 0x70, 0x65, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x73, 0x18, 0x05, 0x20, 0x03,
+	0x28, 0x0b, 0x32, 0x3e, 0x2e, 0x61, 0x75, 0x74, 0x68, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x47, 0x65,
+	0x74, 0x41, 0x76, 0x61, 0x69, 0x6c, 0x61, 0x62, 0x6c, 0x65, 0x53, 0x63, 0x6f, 0x70, 0x65, 0x4e,
+	0x61, 0x6d, 0x65, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75,
+	0x63, 0x74, 0x2e, 0x53, 0x63, 0x6f, 0x70, 0x65, 0x4e, 0x61, 0x6d, 0x65, 0x73, 0x45, 0x6e, 0x74,
+	0x72, 0x79, 0x52, 0x0a, 0x73, 0x63, 0x6f, 0x70, 0x65, 0x4e, 0x61, 0x6d, 0x65, 0x73, 0x1a, 0x3d,
+	0x0a, 0x0f, 0x53, 0x63, 0x6f, 0x70, 0x65, 0x4e, 0x61, 0x6d, 0x65, 0x73, 0x45, 0x6e, 0x74, 0x72,
+	0x79, 0x12, 0x10, 0x0a, 0x03, 0x6b, 0x65, 0x79, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x03,
+	0x6b, 0x65, 0x79, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x02, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x3a, 0x02, 0x38, 0x01, 0x22, 0x24, 0x0a,
 	0x22, 0x41, 0x70, 0x69, 0x6b, 0x65, 0x79, 0x47, 0x65, 0x74, 0x54, 0x65, 0x6d, 0x70, 0x6c, 0x61,
 	0x74, 0x65, 0x4c, 0x69, 0x73, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72,
 	0x75, 0x63, 0x74, 0x22, 0xae, 0x02, 0x0a, 0x14, 0x41, 0x70, 0x69, 0x4b, 0x65, 0x79, 0x54, 0x65,
@@ -1085,7 +1185,7 @@ var file_proto_go_auth_proto_rawDesc = []byte{
 	0x2e, 0x61, 0x75, 0x74, 0x68, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x41, 0x70, 0x69, 0x4b, 0x65, 0x79,
 	0x54, 0x65, 0x6d, 0x70, 0x6c, 0x61, 0x74, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x52, 0x12,
 	0x61, 0x70, 0x69, 0x6b, 0x65, 0x79, 0x54, 0x65, 0x6d, 0x70, 0x6c, 0x61, 0x74, 0x65, 0x4c, 0x69,
-	0x73, 0x74, 0x32, 0xb2, 0x06, 0x0a, 0x04, 0x61, 0x75, 0x74, 0x68, 0x12, 0x71, 0x0a, 0x12, 0x41,
+	0x73, 0x74, 0x32, 0xad, 0x07, 0x0a, 0x04, 0x61, 0x75, 0x74, 0x68, 0x12, 0x71, 0x0a, 0x12, 0x41,
 	0x70, 0x69, 0x6b, 0x65, 0x79, 0x41, 0x75, 0x74, 0x68, 0x65, 0x6e, 0x74, 0x69, 0x63, 0x61, 0x74,
 	0x65, 0x12, 0x2b, 0x2e, 0x61, 0x75, 0x74, 0x68, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x41, 0x70, 0x69,
 	0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x41, 0x75, 0x74, 0x68, 0x65, 0x6e, 0x74, 0x69, 0x63, 0x61, 0x74,
@@ -1136,8 +1236,16 @@ var file_proto_go_auth_proto_rawDesc = []byte{
 	0x4c, 0x69, 0x73, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63,
 	0x74, 0x1a, 0x22, 0x2e, 0x61, 0x75, 0x74, 0x68, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x41, 0x70, 0x69,
 	0x4b, 0x65, 0x79, 0x54, 0x65, 0x6d, 0x70, 0x6c, 0x61, 0x74, 0x65, 0x4c, 0x69, 0x73, 0x74, 0x53,
-	0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00, 0x42, 0x07, 0x5a, 0x05, 0x61, 0x75, 0x74, 0x68, 0x2f,
-	0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x74, 0x72, 0x75, 0x63, 0x74, 0x22, 0x00, 0x12, 0x79, 0x0a, 0x16, 0x47, 0x65, 0x74, 0x41, 0x76,
+	0x61, 0x69, 0x6c, 0x61, 0x62, 0x6c, 0x65, 0x53, 0x63, 0x6f, 0x70, 0x65, 0x4e, 0x61, 0x6d, 0x65,
+	0x73, 0x12, 0x2d, 0x2e, 0x61, 0x75, 0x74, 0x68, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x47, 0x65, 0x74,
+	0x41, 0x76, 0x61, 0x69, 0x6c, 0x61, 0x62, 0x6c, 0x65, 0x53, 0x63, 0x6f, 0x70, 0x65, 0x4e, 0x61,
+	0x6d, 0x65, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74,
+	0x1a, 0x2e, 0x2e, 0x61, 0x75, 0x74, 0x68, 0x47, 0x72, 0x70, 0x63, 0x2e, 0x47, 0x65, 0x74, 0x41,
+	0x76, 0x61, 0x69, 0x6c, 0x61, 0x62, 0x6c, 0x65, 0x53, 0x63, 0x6f, 0x70, 0x65, 0x4e, 0x61, 0x6d,
+	0x65, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74,
+	0x22, 0x00, 0x42, 0x07, 0x5a, 0x05, 0x61, 0x75, 0x74, 0x68, 0x2f, 0x62, 0x06, 0x70, 0x72, 0x6f,
+	0x74, 0x6f, 0x33,
 }
 
 var (
@@ -1152,61 +1260,67 @@ func file_proto_go_auth_proto_rawDescGZIP() []byte {
 	return file_proto_go_auth_proto_rawDescData
 }
 
-var file_proto_go_auth_proto_msgTypes = make([]protoimpl.MessageInfo, 21)
+var file_proto_go_auth_proto_msgTypes = make([]protoimpl.MessageInfo, 24)
 var file_proto_go_auth_proto_goTypes = []interface{}{
-	(*ApiTokenAuthenticateRequestStruct)(nil),  // 0: authGrpc.ApiTokenAuthenticateRequestStruct
-	(*ApiTokenAuthenticateResponseStruct)(nil), // 1: authGrpc.ApiTokenAuthenticateResponseStruct
-	(*ApiKeyStruct)(nil),                       // 2: authGrpc.ApiKeyStruct
-	(*ApiKeyListStruct)(nil),                   // 3: authGrpc.ApiKeyListStruct
-	(*ApikeyCreateRequestStruct)(nil),          // 4: authGrpc.ApikeyCreateRequestStruct
-	(*ApikeyRefreshRequestStruct)(nil),         // 5: authGrpc.ApikeyRefreshRequestStruct
-	(*ApikeyGetRequestStruct)(nil),             // 6: authGrpc.ApikeyGetRequestStruct
-	(*ApikeyEditRequestStruct)(nil),            // 7: authGrpc.ApikeyEditRequestStruct
-	(*ApikeyRemoveRequestStruct)(nil),          // 8: authGrpc.ApikeyRemoveRequestStruct
-	(*ApikeyRemoveResponseStruct)(nil),         // 9: authGrpc.ApikeyRemoveResponseStruct
-	(*ApikeyRemoveAllRequestStruct)(nil),       // 10: authGrpc.ApikeyRemoveAllRequestStruct
-	(*ApikeyRemoveAllResponseStruct)(nil),      // 11: authGrpc.ApikeyRemoveAllResponseStruct
-	(*ApikeyGetListRequestStruct)(nil),         // 12: authGrpc.ApikeyGetListRequestStruct
-	(*ApikeyGetTemplateListRequestStruct)(nil), // 13: authGrpc.ApikeyGetTemplateListRequestStruct
-	(*ApiKeyTemplateStruct)(nil),               // 14: authGrpc.ApiKeyTemplateStruct
-	(*ApiKeyTemplateListStruct)(nil),           // 15: authGrpc.ApiKeyTemplateListStruct
-	nil,                                        // 16: authGrpc.ApiTokenAuthenticateResponseStruct.ScopeListIntEntry
-	nil,                                        // 17: authGrpc.ApiKeyStruct.ScopeListEntry
-	nil,                                        // 18: authGrpc.ApikeyCreateRequestStruct.ScopeListEntry
-	nil,                                        // 19: authGrpc.ApikeyEditRequestStruct.ScopeListEntry
-	nil,                                        // 20: authGrpc.ApiKeyTemplateStruct.ScopeListEntry
+	(*ApiTokenAuthenticateRequestStruct)(nil),    // 0: authGrpc.ApiTokenAuthenticateRequestStruct
+	(*ApiTokenAuthenticateResponseStruct)(nil),   // 1: authGrpc.ApiTokenAuthenticateResponseStruct
+	(*ApiKeyStruct)(nil),                         // 2: authGrpc.ApiKeyStruct
+	(*ApiKeyListStruct)(nil),                     // 3: authGrpc.ApiKeyListStruct
+	(*ApikeyCreateRequestStruct)(nil),            // 4: authGrpc.ApikeyCreateRequestStruct
+	(*ApikeyRefreshRequestStruct)(nil),           // 5: authGrpc.ApikeyRefreshRequestStruct
+	(*ApikeyGetRequestStruct)(nil),               // 6: authGrpc.ApikeyGetRequestStruct
+	(*ApikeyEditRequestStruct)(nil),              // 7: authGrpc.ApikeyEditRequestStruct
+	(*ApikeyRemoveRequestStruct)(nil),            // 8: authGrpc.ApikeyRemoveRequestStruct
+	(*ApikeyRemoveResponseStruct)(nil),           // 9: authGrpc.ApikeyRemoveResponseStruct
+	(*ApikeyRemoveAllRequestStruct)(nil),         // 10: authGrpc.ApikeyRemoveAllRequestStruct
+	(*ApikeyRemoveAllResponseStruct)(nil),        // 11: authGrpc.ApikeyRemoveAllResponseStruct
+	(*ApikeyGetListRequestStruct)(nil),           // 12: authGrpc.ApikeyGetListRequestStruct
+	(*GetAvailableScopeNamesRequestStruct)(nil),  // 13: authGrpc.GetAvailableScopeNamesRequestStruct
+	(*GetAvailableScopeNamesResponseStruct)(nil), // 14: authGrpc.GetAvailableScopeNamesResponseStruct
+	(*ApikeyGetTemplateListRequestStruct)(nil),   // 15: authGrpc.ApikeyGetTemplateListRequestStruct
+	(*ApiKeyTemplateStruct)(nil),                 // 16: authGrpc.ApiKeyTemplateStruct
+	(*ApiKeyTemplateListStruct)(nil),             // 17: authGrpc.ApiKeyTemplateListStruct
+	nil,                                          // 18: authGrpc.ApiTokenAuthenticateResponseStruct.ScopeListIntEntry
+	nil,                                          // 19: authGrpc.ApiKeyStruct.ScopeListEntry
+	nil,                                          // 20: authGrpc.ApikeyCreateRequestStruct.ScopeListEntry
+	nil,                                          // 21: authGrpc.ApikeyEditRequestStruct.ScopeListEntry
+	nil,                                          // 22: authGrpc.GetAvailableScopeNamesResponseStruct.ScopeNamesEntry
+	nil,                                          // 23: authGrpc.ApiKeyTemplateStruct.ScopeListEntry
 }
 var file_proto_go_auth_proto_depIdxs = []int32{
-	16, // 0: authGrpc.ApiTokenAuthenticateResponseStruct.scope_list_int:type_name -> authGrpc.ApiTokenAuthenticateResponseStruct.ScopeListIntEntry
-	17, // 1: authGrpc.ApiKeyStruct.scope_list:type_name -> authGrpc.ApiKeyStruct.ScopeListEntry
+	18, // 0: authGrpc.ApiTokenAuthenticateResponseStruct.scope_list_int:type_name -> authGrpc.ApiTokenAuthenticateResponseStruct.ScopeListIntEntry
+	19, // 1: authGrpc.ApiKeyStruct.scope_list:type_name -> authGrpc.ApiKeyStruct.ScopeListEntry
 	2,  // 2: authGrpc.ApiKeyListStruct.api_key_list:type_name -> authGrpc.ApiKeyStruct
-	18, // 3: authGrpc.ApikeyCreateRequestStruct.scope_list:type_name -> authGrpc.ApikeyCreateRequestStruct.ScopeListEntry
-	19, // 4: authGrpc.ApikeyEditRequestStruct.scope_list:type_name -> authGrpc.ApikeyEditRequestStruct.ScopeListEntry
-	20, // 5: authGrpc.ApiKeyTemplateStruct.scope_list:type_name -> authGrpc.ApiKeyTemplateStruct.ScopeListEntry
-	14, // 6: authGrpc.ApiKeyTemplateListStruct.apikey_template_list:type_name -> authGrpc.ApiKeyTemplateStruct
-	0,  // 7: authGrpc.auth.ApikeyAuthenticate:input_type -> authGrpc.ApiTokenAuthenticateRequestStruct
-	4,  // 8: authGrpc.auth.ApikeyCreate:input_type -> authGrpc.ApikeyCreateRequestStruct
-	6,  // 9: authGrpc.auth.ApikeyGet:input_type -> authGrpc.ApikeyGetRequestStruct
-	5,  // 10: authGrpc.auth.ApikeyRefresh:input_type -> authGrpc.ApikeyRefreshRequestStruct
-	7,  // 11: authGrpc.auth.ApikeyEdit:input_type -> authGrpc.ApikeyEditRequestStruct
-	8,  // 12: authGrpc.auth.ApikeyRemove:input_type -> authGrpc.ApikeyRemoveRequestStruct
-	10, // 13: authGrpc.auth.ApikeyRemoveAll:input_type -> authGrpc.ApikeyRemoveAllRequestStruct
-	12, // 14: authGrpc.auth.ApikeyGetList:input_type -> authGrpc.ApikeyGetListRequestStruct
-	13, // 15: authGrpc.auth.ApikeyGetTemplateList:input_type -> authGrpc.ApikeyGetTemplateListRequestStruct
-	1,  // 16: authGrpc.auth.ApikeyAuthenticate:output_type -> authGrpc.ApiTokenAuthenticateResponseStruct
-	2,  // 17: authGrpc.auth.ApikeyCreate:output_type -> authGrpc.ApiKeyStruct
-	2,  // 18: authGrpc.auth.ApikeyGet:output_type -> authGrpc.ApiKeyStruct
-	2,  // 19: authGrpc.auth.ApikeyRefresh:output_type -> authGrpc.ApiKeyStruct
-	2,  // 20: authGrpc.auth.ApikeyEdit:output_type -> authGrpc.ApiKeyStruct
-	9,  // 21: authGrpc.auth.ApikeyRemove:output_type -> authGrpc.ApikeyRemoveResponseStruct
-	11, // 22: authGrpc.auth.ApikeyRemoveAll:output_type -> authGrpc.ApikeyRemoveAllResponseStruct
-	3,  // 23: authGrpc.auth.ApikeyGetList:output_type -> authGrpc.ApiKeyListStruct
-	15, // 24: authGrpc.auth.ApikeyGetTemplateList:output_type -> authGrpc.ApiKeyTemplateListStruct
-	16, // [16:25] is the sub-list for method output_type
-	7,  // [7:16] is the sub-list for method input_type
-	7,  // [7:7] is the sub-list for extension type_name
-	7,  // [7:7] is the sub-list for extension extendee
-	0,  // [0:7] is the sub-list for field type_name
+	20, // 3: authGrpc.ApikeyCreateRequestStruct.scope_list:type_name -> authGrpc.ApikeyCreateRequestStruct.ScopeListEntry
+	21, // 4: authGrpc.ApikeyEditRequestStruct.scope_list:type_name -> authGrpc.ApikeyEditRequestStruct.ScopeListEntry
+	22, // 5: authGrpc.GetAvailableScopeNamesResponseStruct.scope_names:type_name -> authGrpc.GetAvailableScopeNamesResponseStruct.ScopeNamesEntry
+	23, // 6: authGrpc.ApiKeyTemplateStruct.scope_list:type_name -> authGrpc.ApiKeyTemplateStruct.ScopeListEntry
+	16, // 7: authGrpc.ApiKeyTemplateListStruct.apikey_template_list:type_name -> authGrpc.ApiKeyTemplateStruct
+	0,  // 8: authGrpc.auth.ApikeyAuthenticate:input_type -> authGrpc.ApiTokenAuthenticateRequestStruct
+	4,  // 9: authGrpc.auth.ApikeyCreate:input_type -> authGrpc.ApikeyCreateRequestStruct
+	6,  // 10: authGrpc.auth.ApikeyGet:input_type -> authGrpc.ApikeyGetRequestStruct
+	5,  // 11: authGrpc.auth.ApikeyRefresh:input_type -> authGrpc.ApikeyRefreshRequestStruct
+	7,  // 12: authGrpc.auth.ApikeyEdit:input_type -> authGrpc.ApikeyEditRequestStruct
+	8,  // 13: authGrpc.auth.ApikeyRemove:input_type -> authGrpc.ApikeyRemoveRequestStruct
+	10, // 14: authGrpc.auth.ApikeyRemoveAll:input_type -> authGrpc.ApikeyRemoveAllRequestStruct
+	12, // 15: authGrpc.auth.ApikeyGetList:input_type -> authGrpc.ApikeyGetListRequestStruct
+	15, // 16: authGrpc.auth.ApikeyGetTemplateList:input_type -> authGrpc.ApikeyGetTemplateListRequestStruct
+	13, // 17: authGrpc.auth.GetAvailableScopeNames:input_type -> authGrpc.GetAvailableScopeNamesRequestStruct
+	1,  // 18: authGrpc.auth.ApikeyAuthenticate:output_type -> authGrpc.ApiTokenAuthenticateResponseStruct
+	2,  // 19: authGrpc.auth.ApikeyCreate:output_type -> authGrpc.ApiKeyStruct
+	2,  // 20: authGrpc.auth.ApikeyGet:output_type -> authGrpc.ApiKeyStruct
+	2,  // 21: authGrpc.auth.ApikeyRefresh:output_type -> authGrpc.ApiKeyStruct
+	2,  // 22: authGrpc.auth.ApikeyEdit:output_type -> authGrpc.ApiKeyStruct
+	9,  // 23: authGrpc.auth.ApikeyRemove:output_type -> authGrpc.ApikeyRemoveResponseStruct
+	11, // 24: authGrpc.auth.ApikeyRemoveAll:output_type -> authGrpc.ApikeyRemoveAllResponseStruct
+	3,  // 25: authGrpc.auth.ApikeyGetList:output_type -> authGrpc.ApiKeyListStruct
+	17, // 26: authGrpc.auth.ApikeyGetTemplateList:output_type -> authGrpc.ApiKeyTemplateListStruct
+	14, // 27: authGrpc.auth.GetAvailableScopeNames:output_type -> authGrpc.GetAvailableScopeNamesResponseStruct
+	18, // [18:28] is the sub-list for method output_type
+	8,  // [8:18] is the sub-list for method input_type
+	8,  // [8:8] is the sub-list for extension type_name
+	8,  // [8:8] is the sub-list for extension extendee
+	0,  // [0:8] is the sub-list for field type_name
 }
 
 func init() { file_proto_go_auth_proto_init() }
@@ -1372,7 +1486,7 @@ func file_proto_go_auth_proto_init() {
 			}
 		}
 		file_proto_go_auth_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ApikeyGetTemplateListRequestStruct); i {
+			switch v := v.(*GetAvailableScopeNamesRequestStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1384,7 +1498,7 @@ func file_proto_go_auth_proto_init() {
 			}
 		}
 		file_proto_go_auth_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ApiKeyTemplateStruct); i {
+			switch v := v.(*GetAvailableScopeNamesResponseStruct); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1396,6 +1510,30 @@ func file_proto_go_auth_proto_init() {
 			}
 		}
 		file_proto_go_auth_proto_msgTypes[15].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ApikeyGetTemplateListRequestStruct); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_proto_go_auth_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ApiKeyTemplateStruct); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_proto_go_auth_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ApiKeyTemplateListStruct); i {
 			case 0:
 				return &v.state
@@ -1414,7 +1552,7 @@ func file_proto_go_auth_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_proto_go_auth_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   21,
+			NumMessages:   24,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
@@ -1449,6 +1587,7 @@ type AuthClient interface {
 	ApikeyRemoveAll(ctx context.Context, in *ApikeyRemoveAllRequestStruct, opts ...grpc.CallOption) (*ApikeyRemoveAllResponseStruct, error)
 	ApikeyGetList(ctx context.Context, in *ApikeyGetListRequestStruct, opts ...grpc.CallOption) (*ApiKeyListStruct, error)
 	ApikeyGetTemplateList(ctx context.Context, in *ApikeyGetTemplateListRequestStruct, opts ...grpc.CallOption) (*ApiKeyTemplateListStruct, error)
+	GetAvailableScopeNames(ctx context.Context, in *GetAvailableScopeNamesRequestStruct, opts ...grpc.CallOption) (*GetAvailableScopeNamesResponseStruct, error)
 }
 
 type authClient struct {
@@ -1540,6 +1679,15 @@ func (c *authClient) ApikeyGetTemplateList(ctx context.Context, in *ApikeyGetTem
 	return out, nil
 }
 
+func (c *authClient) GetAvailableScopeNames(ctx context.Context, in *GetAvailableScopeNamesRequestStruct, opts ...grpc.CallOption) (*GetAvailableScopeNamesResponseStruct, error) {
+	out := new(GetAvailableScopeNamesResponseStruct)
+	err := c.cc.Invoke(ctx, "/authGrpc.auth/GetAvailableScopeNames", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // AuthServer is the server API for Auth service.
 type AuthServer interface {
 	ApikeyAuthenticate(context.Context, *ApiTokenAuthenticateRequestStruct) (*ApiTokenAuthenticateResponseStruct, error)
@@ -1551,6 +1699,7 @@ type AuthServer interface {
 	ApikeyRemoveAll(context.Context, *ApikeyRemoveAllRequestStruct) (*ApikeyRemoveAllResponseStruct, error)
 	ApikeyGetList(context.Context, *ApikeyGetListRequestStruct) (*ApiKeyListStruct, error)
 	ApikeyGetTemplateList(context.Context, *ApikeyGetTemplateListRequestStruct) (*ApiKeyTemplateListStruct, error)
+	GetAvailableScopeNames(context.Context, *GetAvailableScopeNamesRequestStruct) (*GetAvailableScopeNamesResponseStruct, error)
 }
 
 // UnimplementedAuthServer can be embedded to have forward compatible implementations.
@@ -1583,6 +1732,9 @@ func (*UnimplementedAuthServer) ApikeyGetList(context.Context, *ApikeyGetListReq
 }
 func (*UnimplementedAuthServer) ApikeyGetTemplateList(context.Context, *ApikeyGetTemplateListRequestStruct) (*ApiKeyTemplateListStruct, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ApikeyGetTemplateList not implemented")
+}
+func (*UnimplementedAuthServer) GetAvailableScopeNames(context.Context, *GetAvailableScopeNamesRequestStruct) (*GetAvailableScopeNamesResponseStruct, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetAvailableScopeNames not implemented")
 }
 
 func RegisterAuthServer(s *grpc.Server, srv AuthServer) {
@@ -1751,6 +1903,24 @@ func _Auth_ApikeyGetTemplateList_Handler(srv interface{}, ctx context.Context, d
 	return interceptor(ctx, in, info, handler)
 }
 
+func _Auth_GetAvailableScopeNames_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetAvailableScopeNamesRequestStruct)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuthServer).GetAvailableScopeNames(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/authGrpc.auth/GetAvailableScopeNames",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuthServer).GetAvailableScopeNames(ctx, req.(*GetAvailableScopeNamesRequestStruct))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 var _Auth_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "authGrpc.auth",
 	HandlerType: (*AuthServer)(nil),
@@ -1790,6 +1960,10 @@ var _Auth_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "ApikeyGetTemplateList",
 			Handler:    _Auth_ApikeyGetTemplateList_Handler,
+		},
+		{
+			MethodName: "GetAvailableScopeNames",
+			Handler:    _Auth_GetAvailableScopeNames_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
