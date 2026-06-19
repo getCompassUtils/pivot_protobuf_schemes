@@ -19,6 +19,7 @@ service databaseController {
   rpc AddPort(AddPortRequestStruct) returns (NullResponseStruct) {}
   rpc CreateMysqlBackup(CreateMysqlBackupRequestStruct) returns (CreateMysqlBackupResponseStruct) {}
   rpc SetPortInvalid(SetPortInvalidRequestStruct) returns (NullResponseStruct) {}
+  rpc SetPortMysqlSettings(SetPortMysqlSettingsRequestStruct) returns (NullResponseStruct) {}
   rpc SyncPortStatus(SyncPortStatusRequestStruct) returns (NullResponseStruct) {}
   rpc ResetPort(ResetPortRequestStruct) returns (NullResponseStruct) {}
   rpc MigrateUp(MigrateRequestStruct) returns (MigrateResponseStruct) {}
@@ -105,6 +106,7 @@ message BindPortRequestStruct {
   int64 company_id = 4;
   int32 duplicate_data_dir_policy = 5;
   int32 non_existing_data_dir_policy = 6;
+  string mysql_settings_json = 7;
 }
 
 message BindPortResponseStruct {
@@ -152,6 +154,13 @@ message MigrateResponseStruct {
 message SetPortInvalidRequestStruct {
   int32 port = 1;
   string host = 2;
+}
+
+message SetPortMysqlSettingsRequestStruct {
+  int32 port = 1;
+  string host = 2;
+  int64 company_id = 3;
+  string mysql_settings_json = 4;
 }
 
 message SyncPortStatusRequestStruct {

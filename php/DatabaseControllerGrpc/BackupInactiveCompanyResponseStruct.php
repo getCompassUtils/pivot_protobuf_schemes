@@ -61,11 +61,21 @@ class BackupInactiveCompanyResponseStruct extends \Google\Protobuf\Internal\Mess
 
     /**
      * Generated from protobuf field <code>.databaseControllerGrpc.GetRoutineStatusResponse routine = 2;</code>
-     * @return \DatabaseControllerGrpc\GetRoutineStatusResponse
+     * @return \DatabaseControllerGrpc\GetRoutineStatusResponse|null
      */
     public function getRoutine()
     {
         return $this->routine;
+    }
+
+    public function hasRoutine()
+    {
+        return isset($this->routine);
+    }
+
+    public function clearRoutine()
+    {
+        unset($this->routine);
     }
 
     /**
