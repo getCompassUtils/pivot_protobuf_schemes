@@ -21,7 +21,7 @@ class databaseControllerClient extends \Grpc\BaseStub {
      * @param \DatabaseControllerGrpc\GetStatusRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \DatabaseControllerGrpc\GetStatusResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function GetStatus(\DatabaseControllerGrpc\GetStatusRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -35,7 +35,7 @@ class databaseControllerClient extends \Grpc\BaseStub {
      * @param \DatabaseControllerGrpc\GetCompanyPortRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \DatabaseControllerGrpc\GetCompanyPortResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function GetCompanyPort(\DatabaseControllerGrpc\GetCompanyPortRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -49,7 +49,7 @@ class databaseControllerClient extends \Grpc\BaseStub {
      * @param \DatabaseControllerGrpc\BindOnServicePortRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \DatabaseControllerGrpc\BindOnServicePortResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function BindOnServicePort(\DatabaseControllerGrpc\BindOnServicePortRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -63,7 +63,7 @@ class databaseControllerClient extends \Grpc\BaseStub {
      * @param \DatabaseControllerGrpc\BeginDataCopyingRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \DatabaseControllerGrpc\BeginDataCopyingResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function BeginDataCopying(\DatabaseControllerGrpc\BeginDataCopyingRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -77,7 +77,7 @@ class databaseControllerClient extends \Grpc\BaseStub {
      * @param \DatabaseControllerGrpc\BackupActiveCompanyRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \DatabaseControllerGrpc\BackupActiveCompanyResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function BackupActiveCompany(\DatabaseControllerGrpc\BackupActiveCompanyRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -91,7 +91,7 @@ class databaseControllerClient extends \Grpc\BaseStub {
      * @param \DatabaseControllerGrpc\BackupInactiveCompanyRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \DatabaseControllerGrpc\BackupInactiveCompanyResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function BackupInactiveCompany(\DatabaseControllerGrpc\BackupInactiveCompanyRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -105,7 +105,7 @@ class databaseControllerClient extends \Grpc\BaseStub {
      * @param \DatabaseControllerGrpc\UploadBackupToStorageRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \DatabaseControllerGrpc\UploadBackupToStorageResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function UploadBackupToStorage(\DatabaseControllerGrpc\UploadBackupToStorageRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -119,7 +119,7 @@ class databaseControllerClient extends \Grpc\BaseStub {
      * @param \DatabaseControllerGrpc\BeginDataApplyingRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \DatabaseControllerGrpc\BeginDataApplyingResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function BeginDataApplying(\DatabaseControllerGrpc\BeginDataApplyingRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -133,7 +133,7 @@ class databaseControllerClient extends \Grpc\BaseStub {
      * @param \DatabaseControllerGrpc\GetRoutineStatusRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \DatabaseControllerGrpc\GetRoutineStatusResponse
+     * @return \Grpc\UnaryCall
      */
     public function GetRoutineStatus(\DatabaseControllerGrpc\GetRoutineStatusRequest $argument,
       $metadata = [], $options = []) {
@@ -147,7 +147,7 @@ class databaseControllerClient extends \Grpc\BaseStub {
      * @param \DatabaseControllerGrpc\GenerateMysqlConfigRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \DatabaseControllerGrpc\GenerateMysqlConfigResponse
+     * @return \Grpc\UnaryCall
      */
     public function GenerateMysqlConfig(\DatabaseControllerGrpc\GenerateMysqlConfigRequest $argument,
       $metadata = [], $options = []) {
@@ -161,7 +161,7 @@ class databaseControllerClient extends \Grpc\BaseStub {
      * @param \DatabaseControllerGrpc\BindPortRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \DatabaseControllerGrpc\BindPortResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function BindPort(\DatabaseControllerGrpc\BindPortRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -175,7 +175,7 @@ class databaseControllerClient extends \Grpc\BaseStub {
      * @param \DatabaseControllerGrpc\UnbindPortRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \DatabaseControllerGrpc\NullResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function UnbindPort(\DatabaseControllerGrpc\UnbindPortRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -189,7 +189,7 @@ class databaseControllerClient extends \Grpc\BaseStub {
      * @param \DatabaseControllerGrpc\AddPortRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \DatabaseControllerGrpc\NullResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function AddPort(\DatabaseControllerGrpc\AddPortRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -203,7 +203,7 @@ class databaseControllerClient extends \Grpc\BaseStub {
      * @param \DatabaseControllerGrpc\CreateMysqlBackupRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \DatabaseControllerGrpc\CreateMysqlBackupResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function CreateMysqlBackup(\DatabaseControllerGrpc\CreateMysqlBackupRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -217,7 +217,7 @@ class databaseControllerClient extends \Grpc\BaseStub {
      * @param \DatabaseControllerGrpc\SetPortInvalidRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \DatabaseControllerGrpc\NullResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function SetPortInvalid(\DatabaseControllerGrpc\SetPortInvalidRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -228,10 +228,24 @@ class databaseControllerClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \DatabaseControllerGrpc\SetPortMysqlSettingsRequestStruct $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function SetPortMysqlSettings(\DatabaseControllerGrpc\SetPortMysqlSettingsRequestStruct $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/databaseControllerGrpc.databaseController/SetPortMysqlSettings',
+        $argument,
+        ['\DatabaseControllerGrpc\NullResponseStruct', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \DatabaseControllerGrpc\SyncPortStatusRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \DatabaseControllerGrpc\NullResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function SyncPortStatus(\DatabaseControllerGrpc\SyncPortStatusRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -245,7 +259,7 @@ class databaseControllerClient extends \Grpc\BaseStub {
      * @param \DatabaseControllerGrpc\ResetPortRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \DatabaseControllerGrpc\NullResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function ResetPort(\DatabaseControllerGrpc\ResetPortRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -259,7 +273,7 @@ class databaseControllerClient extends \Grpc\BaseStub {
      * @param \DatabaseControllerGrpc\MigrateRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \DatabaseControllerGrpc\MigrateResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function MigrateUp(\DatabaseControllerGrpc\MigrateRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -273,7 +287,7 @@ class databaseControllerClient extends \Grpc\BaseStub {
      * @param \DatabaseControllerGrpc\MigrateRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \DatabaseControllerGrpc\MigrateResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function MigrateLegacyClean(\DatabaseControllerGrpc\MigrateRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -287,7 +301,7 @@ class databaseControllerClient extends \Grpc\BaseStub {
      * @param \DatabaseControllerGrpc\PrepareCompanyDataDirRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \DatabaseControllerGrpc\NullResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function PrepareCompanyDataDir(\DatabaseControllerGrpc\PrepareCompanyDataDirRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -301,7 +315,7 @@ class databaseControllerClient extends \Grpc\BaseStub {
      * @param \DatabaseControllerGrpc\InitSearchRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \DatabaseControllerGrpc\NullResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function InitSearch(\DatabaseControllerGrpc\InitSearchRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -315,7 +329,7 @@ class databaseControllerClient extends \Grpc\BaseStub {
      * @param \DatabaseControllerGrpc\DropSearchTableRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \DatabaseControllerGrpc\NullResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function DropSearchTable(\DatabaseControllerGrpc\DropSearchTableRequestStruct $argument,
       $metadata = [], $options = []) {
@@ -329,7 +343,7 @@ class databaseControllerClient extends \Grpc\BaseStub {
      * @param \DatabaseControllerGrpc\NullRequestStruct $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \DatabaseControllerGrpc\NullResponseStruct
+     * @return \Grpc\UnaryCall
      */
     public function UpdateDeployment(\DatabaseControllerGrpc\NullRequestStruct $argument,
       $metadata = [], $options = []) {

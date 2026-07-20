@@ -9,32 +9,24 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>databaseControllerGrpc.BindPortRequestStruct</code>
+ * Generated from protobuf message <code>databaseControllerGrpc.SetPortMysqlSettingsRequestStruct</code>
  */
-class BindPortRequestStruct extends \Google\Protobuf\Internal\Message
+class SetPortMysqlSettingsRequestStruct extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>int32 port = 1;</code>
      */
     protected $port = 0;
     /**
-     * Generated from protobuf field <code>string host = 3;</code>
+     * Generated from protobuf field <code>string host = 2;</code>
      */
     protected $host = '';
     /**
-     * Generated from protobuf field <code>int64 company_id = 4;</code>
+     * Generated from protobuf field <code>int64 company_id = 3;</code>
      */
     protected $company_id = 0;
     /**
-     * Generated from protobuf field <code>int32 duplicate_data_dir_policy = 5;</code>
-     */
-    protected $duplicate_data_dir_policy = 0;
-    /**
-     * Generated from protobuf field <code>int32 non_existing_data_dir_policy = 6;</code>
-     */
-    protected $non_existing_data_dir_policy = 0;
-    /**
-     * Generated from protobuf field <code>string mysql_settings_json = 7;</code>
+     * Generated from protobuf field <code>string mysql_settings_json = 4;</code>
      */
     protected $mysql_settings_json = '';
 
@@ -47,8 +39,6 @@ class BindPortRequestStruct extends \Google\Protobuf\Internal\Message
      *     @type int $port
      *     @type string $host
      *     @type int|string $company_id
-     *     @type int $duplicate_data_dir_policy
-     *     @type int $non_existing_data_dir_policy
      *     @type string $mysql_settings_json
      * }
      */
@@ -80,7 +70,7 @@ class BindPortRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string host = 3;</code>
+     * Generated from protobuf field <code>string host = 2;</code>
      * @return string
      */
     public function getHost()
@@ -89,7 +79,7 @@ class BindPortRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string host = 3;</code>
+     * Generated from protobuf field <code>string host = 2;</code>
      * @param string $var
      * @return $this
      */
@@ -102,7 +92,7 @@ class BindPortRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 company_id = 4;</code>
+     * Generated from protobuf field <code>int64 company_id = 3;</code>
      * @return int|string
      */
     public function getCompanyId()
@@ -111,7 +101,7 @@ class BindPortRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 company_id = 4;</code>
+     * Generated from protobuf field <code>int64 company_id = 3;</code>
      * @param int|string $var
      * @return $this
      */
@@ -124,51 +114,7 @@ class BindPortRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 duplicate_data_dir_policy = 5;</code>
-     * @return int
-     */
-    public function getDuplicateDataDirPolicy()
-    {
-        return $this->duplicate_data_dir_policy;
-    }
-
-    /**
-     * Generated from protobuf field <code>int32 duplicate_data_dir_policy = 5;</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setDuplicateDataDirPolicy($var)
-    {
-        GPBUtil::checkInt32($var);
-        $this->duplicate_data_dir_policy = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>int32 non_existing_data_dir_policy = 6;</code>
-     * @return int
-     */
-    public function getNonExistingDataDirPolicy()
-    {
-        return $this->non_existing_data_dir_policy;
-    }
-
-    /**
-     * Generated from protobuf field <code>int32 non_existing_data_dir_policy = 6;</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setNonExistingDataDirPolicy($var)
-    {
-        GPBUtil::checkInt32($var);
-        $this->non_existing_data_dir_policy = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>string mysql_settings_json = 7;</code>
+     * Generated from protobuf field <code>string mysql_settings_json = 4;</code>
      * @return string
      */
     public function getMysqlSettingsJson()
@@ -177,7 +123,7 @@ class BindPortRequestStruct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string mysql_settings_json = 7;</code>
+     * Generated from protobuf field <code>string mysql_settings_json = 4;</code>
      * @param string $var
      * @return $this
      */
